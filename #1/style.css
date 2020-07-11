@@ -1,3 +1,13 @@
 body {
     background: linear-gradient(90deg, rgba(122, 180,255,1) 0%, rgba(123,91,217,1) 100%);
 }
+
+.circle-center {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+}
