@@ -7,21 +7,21 @@ body {
 }
 
 .big-circle {
+    animation: pulse 1.5s alternate infinite;
     margin: 0 auto;
+    border-radius: 50%;
     width: 200px;
     height: 200px;
-    border-radius: 50%;
     background-color: rgba(255, 255,255,.3);
-    animation: pulse 1.5s alternate infinite;
 }
 
 .small-circle {
     position: relative;
     top: 50px;
     left: 50px;
+    border-radius: 50%;
     width: 100px;
     height: 100px;
-    border-radius: 50%;
     background-color: white;
 }
 
