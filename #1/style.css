@@ -30,10 +30,10 @@ body {
 }
 
 @keyframes pulse {
-    0% {
+    from {
         transform: scale(1);
     }
-    100% {
+    to {
         transform: scale(1.5);
     }
 }
