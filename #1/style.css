@@ -25,6 +25,9 @@ body {
     background-color: white;
 }
 
+.small-circle:hover {
+    animation: shake .1s alternate infinite;
+}
 
 @keyframes pulse {
     0% {
@@ -35,4 +38,14 @@ body {
     }
 }
 
+@keyframes shake {
+    0% {
+        transform: translate(0%);
+    }
+    25%, 75% {
+        transform: translateY(1%);
+    }
+    50%, 100% {
+        transform: translateX(1%);
+    }
 }
