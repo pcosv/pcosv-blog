@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap");
+body {
+  background-color: black;
+  font-family: "Noto Sans JP", sans-serif;
+  color: white;
+  letter-spacing: 1px;
+  font-size: 30px;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  text-align: center;
+}
+h1::before, h1::after {
+  display: block;
+  content: "we are not equally present in all parts of ourselves";
+  position: absolute;
+  top: 0;
+}
+h1::before {
+  left: 7px;
+  color: #7ab4ff;
+  z-index: -1;
+}
+h1::after {
+  left: -7px;
+  color: #7b5bd9;
+  z-index: -2;
+}
+h1:hover::before {
+  animation: glitch-advanced 2s ease reverse infinite;
+}
+h1:hover::after {
+  animation: glitch-advanced 2s ease infinite;
+}
+
+@keyframes glitch-basic {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-3px, 3px);
+  }
+  40% {
+    transform: translate(-3px, -3px);
+  }
+  60% {
+    transform: translate(3px, 3px);
+  }
+  80% {
+    transform: translate(3px, -3px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes glitch-advanced {
+  0% {
+    clip: rect(1px 600px 258px 0);
+  }
+  3.3333333333% {
+    clip: rect(194px 600px 164px 0);
+  }
+  6.6666666667% {
+    clip: rect(171px 600px 84px 0);
+  }
+  10% {
+    clip: rect(259px 600px 293px 0);
+  }
+  13.3333333333% {
+    clip: rect(295px 600px 283px 0);
+  }
+  16.6666666667% {
+    clip: rect(23px 600px 252px 0);
+  }
+  20% {
+    clip: rect(173px 600px 186px 0);
+  }
+  23.3333333333% {
+    clip: rect(7px 600px 295px 0);
+  }
+  26.6666666667% {
+    clip: rect(237px 600px 193px 0);
+  }
+  30% {
+    clip: rect(117px 600px 137px 0);
+  }
+  33.3333333333% {
+    clip: rect(91px 600px 146px 0);
+  }
+  36.6666666667% {
+    clip: rect(203px 600px 289px 0);
+  }
+  40% {
+    clip: rect(255px 600px 298px 0);
+  }
+  43.3333333333% {
+    clip: rect(229px 600px 243px 0);
+  }
+  46.6666666667% {
+    clip: rect(29px 600px 87px 0);
+  }
+  50% {
+    clip: rect(268px 600px 81px 0);
+  }
+  53.3333333333% {
+    clip: rect(188px 600px 184px 0);
+  }
+  56.6666666667% {
+    clip: rect(226px 600px 239px 0);
+  }
+  60% {
+    clip: rect(275px 600px 50px 0);
+  }
+  63.3333333333% {
+    clip: rect(113px 600px 123px 0);
+  }
+  66.6666666667% {
+    clip: rect(2px 600px 240px 0);
+  }
+  70% {
+    clip: rect(229px 600px 129px 0);
+  }
+  73.3333333333% {
+    clip: rect(244px 600px 265px 0);
+  }
+  76.6666666667% {
+    clip: rect(116px 600px 212px 0);
+  }
+  80% {
+    clip: rect(230px 600px 182px 0);
+  }
+  83.3333333333% {
+    clip: rect(8px 600px 83px 0);
+  }
+  86.6666666667% {
+    clip: rect(132px 600px 53px 0);
+  }
+  90% {
+    clip: rect(17px 600px 85px 0);
+  }
+  93.3333333333% {
+    clip: rect(101px 600px 265px 0);
+  }
+  96.6666666667% {
+    clip: rect(161px 600px 235px 0);
+  }
+  100% {
+    clip: rect(86px 600px 89px 0);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
