@@ -1,76 +1,87 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap');
 
 body {
-    background-color: black;
-    font-family: 'Noto Sans JP', sans-serif;
-    color: white;
-    letter-spacing: 1px;
-    font-size: 60px;
+  background-color: black;
+  color: white;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 60px;
+  letter-spacing: 1px;
 }
 
 h1 {
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1200px;
-    text-align: center;
-    &::before, &::after {
-        display: block;
-        content: 'we are not equally present in all parts of ourselves';
-        position: absolute;
-        top: 0;
-    }
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  width: 1200px;
+
+  &::before,
+  &::after {
+    content: 'we are not equally present in all parts of ourselves';
+    display: block;
+    position: absolute;
+    top: 0;
+  }
+
+  &::before {
+    color: rgba(122, 180, 255, 1);
+    z-index: -1;
+  }
+
+  &::after {
+    color: rgba(123, 91, 217, 1);
+    z-index: -2;
+  }
+
+  &:hover {
     &::before {
-        color: rgba(122, 180,255,1);
-        z-index: -1;
+      animation: glitch-advanced 3s ease reverse infinite;
+      // animation: glitch-basic .3s infinite;
+      left: 15px;
     }
+
     &::after {
-        color: rgba(123,91,217,1);
-        z-index: -2;
+      animation: glitch-advanced 3s ease infinite;
+      // animation: glitch-basic .3s reverse infinite;
+      left: -15px;
     }
-    &:hover {
-        &::before {
-            left: 15px;
-            animation: glitch-advanced 3s ease reverse infinite;
-            // animation: glitch-basic .3s infinite;
-        }
-        &::after {
-            left: -15px;
-            animation: glitch-advanced 3s ease infinite;
-            // animation: glitch-basic .3s reverse infinite;
-        }
-    }
+  }
 }
 
 @keyframes glitch-basic {
-    0% {
-        transform: translate(0);
-    }
-    20% {
-        transform: translate(-3px, 3px);
-    }
-    40% {
-        transform: translate(-3px, -3px);
-    }
-    60% {
-        transform: translate(3px, 3px);
-    }
-    80% {
-        transform: translate(3px, -3px);
-    }
-    100% {
-        transform: translate(0);
-    }
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-3px, 3px);
+  }
+
+  40% {
+    transform: translate(-3px, -3px);
+  }
+
+  60% {
+    transform: translate(3px, 3px);
+  }
+
+  80% {
+    transform: translate(3px, -3px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
 }
 
 @keyframes glitch-advanced {
-    $steps: 50;
-    @for $step from 0 through $steps {
-        #{percentage($step*(1/$steps))} {
-            $top: random(530);
-            $bottom: random(530);
-            clip: rect(#{$top}px 1200px #{$bottom}px 0);
-        }
+  $steps: 50;
+  @for $step from 0 through $steps {
+    #{percentage($step * (1 / $steps))} {
+      $top: random(530);
+      $bottom: random(530);
+      clip: rect(#{$top}px 1200px #{$bottom}px 0);
     }
+  }
 }
