@@ -18,3 +18,10 @@ $red: #ce0816;
   border: 8px solid $black;
   border-radius: 10px;
 }
+
+.grid-item {
+  border-bottom: 8px solid $black;
+  border-left: 8px solid $black;
+
+  &:hover { animation: fadeOut .5s; }
+}
