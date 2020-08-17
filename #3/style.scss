@@ -23,5 +23,6 @@ $red: #ce0816;
   border-bottom: 8px solid $black;
   border-left: 8px solid $black;
 
+  &.-yellow { background-color: $yellow; }
   &:hover { animation: fadeOut .5s; }
 }
