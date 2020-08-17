@@ -41,5 +41,17 @@ $red: #ce0816;
     &.-fourth { grid-area: 4 / 1 / span 2 / span 2; }
   }
 
+  &:nth-child(1),
+  &:nth-child(5),
+  &:nth-child(10) {
+    border-left: 0;
+  }
+
+  &:nth-child(10),
+  &:nth-child(13),
+  &:nth-child(15) {
+    border-bottom: 0;
+  }
+
   &:hover { animation: fadeOut .5s; }
 }
