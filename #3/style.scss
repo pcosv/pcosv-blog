@@ -29,5 +29,9 @@ $red: #ce0816;
     background-color: $blue;
     &.-big { grid-area: 5 / 3 / span 1 / span 2; }
   }
+  &.-red {
+    background-color: $red;
+    &.-big { grid-area: 2 / 1 / span 2 / span 2; }
+  }
   &:hover { animation: fadeOut .5s; }
 }
