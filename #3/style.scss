@@ -3,3 +3,18 @@ $white: #f0f3f8;
 $yellow: #f1e604;
 $blue: #134093;
 $red: #ce0816;
+
+
+.grid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-rows: 25% 22% 22% 18% 13%;
+  grid-template-columns: 20% 20% 17.5% 17.5% 25%;
+  width: 400px;
+  height: 400px;
+  border: 8px solid $black;
+  border-radius: 10px;
+}
